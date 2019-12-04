@@ -59,13 +59,17 @@ body {
     -50%
   ); /* we translate from the middle of the div text-box */
 
-  backface-visibility: hidden; /* fix the issue of the animation going a little bit top */
-  /* no one know how to really fix this for now */
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+
+  backface-visibility: hidden; /* fix the issue of the animation going a little bit top */
+  /* no one know how to really fix this for now */
+
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -125,4 +129,32 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+/* :link is a pseudo-class and :visited too (after we clicked once) */
+.btn:link,
+.botn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block; /* don't touch the h1 so */
+  border-radius: 100px;
+  transition: all 0.2s; /* always on the initial state */
+}
+
+.btn:hover {
+  transform: translateY(
+    -3px
+  ); /* negative because Y goes from the top to the bottom */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px); /* related to the initial :link state */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
