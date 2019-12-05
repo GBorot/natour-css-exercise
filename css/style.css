@@ -131,6 +131,18 @@ body {
   }
 }
 
+@keyframes moveInBottom {
+  /* give the name of the animation */
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 /* :link is a pseudo-class and :visited too (after we clicked once) */
 .btn:link,
 .botn:visited {
@@ -140,6 +152,7 @@ body {
   display: inline-block; /* don't touch the h1 so */
   border-radius: 100px;
   transition: all 0.2s; /* always on the initial state */
+  position: relative;
 }
 
 .btn:hover {
@@ -157,4 +170,33 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+
+/* render the same btn after clicking */
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  /* applies the keyframe to 0% before animation starts */
 }
