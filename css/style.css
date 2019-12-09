@@ -8,20 +8,34 @@ Dark green: #28b485
 */
 
 /* select all on the page */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  /* border-box allows to not add to the total width or height the borders */
+  box-sizing: inherit;
+  /* force inheritance to body border box */
+}
+
+html {
+  /* not 16px because it's easier to calculate with rem
+  it allows us to divide all pixeled font sizes to 10 to convert them in rem
+  
+  62.5% === 10px <=> root font size
+  */
+  font-size: 62.5%;
 }
 
 body {
+  /* border-box allows to not add to the total width or height the borders */
+  box-sizing: border-box;
+
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
 }
 
 .header {
@@ -42,12 +56,12 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .text-box {
@@ -69,14 +83,14 @@ body {
   backface-visibility: hidden; /* fix the issue of the animation going a little bit top */
   /* no one know how to really fix this for now */
 
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -88,9 +102,9 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
 
   animation: moveInRight 1s ease-out;
   /* animation-name: moveInRight;
@@ -102,13 +116,13 @@ body {
   /* give the name of the animation */
   0% {
     opacity: 0;
-    transform: translateX(-100px) /*rotate(-50deg)*/;
+    transform: translateX(-10rem) /*rotate(-50deg)*/;
   }
   /* 60% {
     transform: rotate(120deg);
   } */
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -120,10 +134,10 @@ body {
   /* give the name of the animation */
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
@@ -135,7 +149,7 @@ body {
   /* give the name of the animation */
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -148,23 +162,24 @@ body {
 .botn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block; /* don't touch the h1 so */
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s; /* always on the initial state */
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
   transform: translateY(
     -3px
   ); /* negative because Y goes from the top to the bottom */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-1px); /* related to the initial :link state */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -178,7 +193,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
