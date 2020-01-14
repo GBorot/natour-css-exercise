@@ -13,6 +13,7 @@ $color-primary-dark: #28b485;
 
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 /* select all on the page */
 *,
@@ -181,12 +182,12 @@ body {
   transform: translateY(
     -3px
   ); /* negative because Y goes from the top to the bottom */
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
 }
 
 .btn:active {
   transform: translateY(-1px); /* related to the initial :link state */
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 1rem rgba($color-black, 0.2);
 }
 
 .btn--white {
