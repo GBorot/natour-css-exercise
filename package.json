@@ -16,7 +16,8 @@
     "url": "https://github.com/GBorot/natour-css-exercise/issues"
   },
   "homepage": "https://github.com/GBorot/natour-css-exercise#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "node-sass": "^4.13.0"
   }
 }
