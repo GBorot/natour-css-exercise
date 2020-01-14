@@ -1,0 +1,25 @@
+/* select all on the page */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* force inheritance to body border box */
+}
+
+html {
+  /* not 16px because it's easier to calculate with rem
+  it allows us to divide all pixeled font sizes to 10 to convert them in rem
+  
+  62.5% === 10px <=> root font size
+  */
+
+  // This defines what 1rem is
+  font-size: 62.5%;
+}
+
+body {
+  /* border-box allows to not add to the total width or height the borders */
+  box-sizing: border-box;
+}

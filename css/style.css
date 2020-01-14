@@ -4,7 +4,6 @@ COLORS:
 Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
-
 */
 /* select all on the page */
 *,
@@ -32,6 +31,40 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem; }
+
+@keyframes moveInLeft {
+  /* give the name of the animation */
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  /* 60% {
+      transform: rotate(120deg);
+    } */
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  /* give the name of the animation */
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  /* give the name of the animation */
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 .header {
   height: 95vh;
@@ -83,83 +116,3 @@ body {
     /* animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out; */ }
-
-@keyframes moveInLeft {
-  /* give the name of the animation */
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  /* 60% {
-    transform: rotate(120deg);
-  } */
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  /* give the name of the animation */
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInBottom {
-  /* give the name of the animation */
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-/* :link is a pseudo-class and :visited too (after we clicked once) */
-.btn {
-  /* render the same btn after clicking */ }
-  .btn:link, .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    /* don't touch the h1 so */
-    border-radius: 10rem;
-    transition: all 0.2s;
-    /* always on the initial state */
-    position: relative;
-    font-size: 1.6rem; }
-  .btn:hover {
-    transform: translateY(-3px);
-    /* negative because Y goes from the top to the bottom */
-    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); }
-    .btn:hover::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0; }
-  .btn:active {
-    transform: translateY(-1px);
-    /* related to the initial :link state */
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2); }
-  .btn--white {
-    background-color: #fff;
-    color: #777; }
-    .btn--white::after {
-      background-color: #fff; }
-  .btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.4s; }
-  .btn--animated {
-    animation: moveInBottom 0.5s ease-out 0.75s;
-    animation-fill-mode: backwards;
-    /* applies the keyframe to 0% before animation starts */ }
