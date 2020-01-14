@@ -16,9 +16,7 @@
     "url": "https://github.com/GBorot/natour-css-exercise/issues"
   },
   "homepage": "https://github.com/GBorot/natour-css-exercise#readme",
-  "dependencies": {
-    "jquery": "^3.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "node-sass": "^4.13.0"
   }
