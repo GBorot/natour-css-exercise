@@ -4,8 +4,8 @@
 @import "abstracts/variables";
 
 // Base elements
-@import "base/base";
 @import "base/animations";
+@import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
@@ -14,6 +14,7 @@
 
 // Layout elements
 @import "layout/header";
+@import "layout/grid";
 
 // Pages elements
 @import "pages/home";
