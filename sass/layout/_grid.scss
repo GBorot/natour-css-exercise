@@ -1,6 +1,6 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
+  // background-color: #eee;
   margin: 0 auto;
 
   // select every row non including the last child
@@ -16,7 +16,7 @@
   // We could also use "*" that select all that contain "col-"
   // Or also "$" that selects all that ends by "col-"
   [class^="col-"] {
-    background-color: orangered;
+    // background-color: orangered;
     float: left;
 
     &:not(:last-child) {
