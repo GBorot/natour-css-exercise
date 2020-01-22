@@ -11,6 +11,9 @@
   /* when resizing the background is focus on the top of the image */
   /* define the four coordinates of the polygones that will contain the header */
   position: relative;
+
+  // styling the polygon
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
   &__logo-box {
