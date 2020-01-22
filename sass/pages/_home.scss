@@ -16,4 +16,12 @@
   background-size: cover;
 
   transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  // selects all DIRECT CHILDS
+  // .section-features > *
+  // don't confuse with .section-features * that selects all CHILDS
+  & > * {
+    transform: skewY(7deg);
+  }
 }
