@@ -5,4 +5,14 @@
   background-color: $color-white;
   border-radius: 3px;
   padding: 6rem;
+  font-size: $default-font-size;
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: orangered;
+    // this is how we shape around circle (first is the radius and second is the center
+    shape-outside: circle(50% at 50% 50%);
+  }
 }
