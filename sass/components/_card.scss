@@ -76,6 +76,8 @@
     // styling  a polygon picture
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    // border-top-left-radius: 3px;
+    // border-top-right-radius: 3px;
 
     &--1 {
       // here we just move out one level because the code will be compiled in style.css

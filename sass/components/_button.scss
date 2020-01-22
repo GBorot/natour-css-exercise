@@ -38,6 +38,16 @@
     }
   }
 
+  // adding another color
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   /* render the same btn after clicking */
   &::after {
     content: "";
