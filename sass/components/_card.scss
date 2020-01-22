@@ -19,13 +19,30 @@
     // hides the back part of a component
     backface-visibility: hidden;
 
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
     &--front {
-      background-color: orangered;
+      background-color: $color-white;
+      color: black;
     }
 
     &--back {
-      background-color: green;
       transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-2 {
+      }
+
+      &-3 {
+      }
     }
   }
 
