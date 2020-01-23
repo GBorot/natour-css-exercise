@@ -35,7 +35,7 @@
     <main>
       <section class="section-about">
         <!-- setting a utility class to center text -->
-        <div class="u-center-text u-margin-bottom-big">
+        <div class="u-center-text u-margin-bottom-big u-margin-top-big">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
           </h2>
@@ -144,7 +144,7 @@
       </section>
 
       <section class="section-tours">
-        <div class="u-center-text u-margin-bottom-big">
+        <div class="u-center-text u-margin-bottom-big u-margin-top-big">
           <h2 class="heading-secondary">
             Most popular tours
           </h2>
@@ -273,6 +273,16 @@
       </section>
 
       <section class="section-stories">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <!-- we prefer using source tag instead of attribute -->
+            <source src="img/video.mp4" type="video/mp4">
+            <source src="img/video.webm" type="video/webm">
+            <!-- it will play the video, and if it's not suported will show this message -->
+            Your browser is not supported!
+          </video>
+        </div>
+
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             We make people genuinely happy
