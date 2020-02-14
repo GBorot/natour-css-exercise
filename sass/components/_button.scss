@@ -1,5 +1,6 @@
 /* :link is a pseudo-class and :visited too (after we clicked once) */
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -10,6 +11,10 @@
     transition: all 0.2s; /* always on the initial state */
     position: relative;
     font-size: 1.6rem;
+
+    // Change for the <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -24,7 +29,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px); /* related to the initial :link state */
     box-shadow: 0 0.25rem 1rem rgba($color-black, 0.2);
   }
