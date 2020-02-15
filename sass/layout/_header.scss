@@ -27,13 +27,7 @@
   }
 
   &__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%; /* we translate from the middle of the div header */
-    transform: translate(
-      -50%,
-      -50%
-    ); /* we translate from the middle of the div text-box */
+    @include absCenter;
 
     text-align: center;
   }
