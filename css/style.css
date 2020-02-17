@@ -679,7 +679,8 @@ body {
     margin-bottom: 8rem; }
     @media (max-width: 56.25em) {
       .row:not(:last-child) {
-        margin-bottom: 6rem; } }
+        margin-bottom: 6rem;
+        padding: 0 3rem; } }
   @media (max-width: 56.25em) {
     .row {
       max-width: 50rem; } }

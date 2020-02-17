@@ -9,6 +9,7 @@
 
     @include respond(tab-port) {
       margin-bottom: $gutter-vertical-small;
+      padding: 0 3rem;
     }
   }
 
