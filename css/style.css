@@ -12,6 +12,8 @@ $breakpoint argument choices:
 - tab-land
 - big-desktop
 
+ORDER: Base + Typography > General Layout + Grid > Page Layout > Components
+
 1em = 16px
 
 */
@@ -84,15 +86,18 @@ html {
 
 body {
   /* border-box allows to not add to the total width or height the borders */
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
