@@ -13,8 +13,12 @@
     }
   }
 
+  @include respond(tab-land) {
+    max-width: 90rem;
+  }
+
   @include respond(tab-port) {
-    max-width: 50rem;
+    max-width: 70rem;
   }
 
   // importing a mixin to clearfix space because of float the height was 0px
