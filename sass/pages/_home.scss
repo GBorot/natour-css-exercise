@@ -4,6 +4,11 @@
   // handling the triangle missing margin of the header
   margin-top: -30vh;
   // margin-bottom: 35vh;
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+    margin-bottom: 5rem;
+  }
 }
 
 .section-features {
@@ -25,18 +30,31 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-tours {
   background-color: $color-grey-light-1;
   padding: 25rem 0 15rem 0;
   margin-top: -25rem;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+    margin-top: -20rem;
+  }
 }
 
 .section-stories {
   padding: 15rem 0;
   // background-color: $color-grey-light-1;
   position: relative;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
@@ -46,6 +64,10 @@
     $color-primary-light,
     $color-primary-dark
   );
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .book {
