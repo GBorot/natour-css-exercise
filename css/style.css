@@ -706,6 +706,9 @@ body {
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #f7f7f7f7; }
+  @media (max-width: 37.5em) {
+    .footer {
+      padding: 8rem; } }
   @media (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
