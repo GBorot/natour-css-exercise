@@ -110,6 +110,11 @@
       display: inline-block;
       transition: all 0.2s;
       line-height: 1;
+
+      @include respond(phone) {
+        color: $color-grey-light-1;
+        top: 4rem;
+      }
     }
 
     &:hover {
